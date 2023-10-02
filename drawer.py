@@ -33,8 +33,8 @@ class _SubMatirx:
         self.matrix._set_led(x, y, color)
 
     def fill(self, color):
-        for i in range(self.x0, self.max_x):
-            for j in range(self.y0, self.max_y):
+        for i in range(self.cols):
+            for j in range(self.rows):
                 self[i, j] = color
 
     def clear(self):
@@ -42,7 +42,7 @@ class _SubMatirx:
 
 
 class Matrix:
-    def __init__(self, pin, cols, rows):
+    def __init__(self, cols, rows, pin):
         self.cols = cols
         self.rows = rows
         self.pin = pin
